@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <meta property="og:title" content="THE F2E FreeCell" />
+  <meta property="og:description" content="FreeCell">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/PNG.png" />
+
+  <link rel="stylesheet" href="css/CSS style.css">
+  <link rel="stylesheet" href="css/CSS reset.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+  <title>FreeCell</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="main-content">
+      <div class="temp-card-place">
+
+          <div class="temp-card" id="temp1" ondrop="DropTemp(event)" ondragover="AllowDrop(event)"></div>
+          <div class="temp-card" id="temp2" ondrop="DropTemp(event)" ondragover="AllowDrop(event)"></div>
+          <div class="temp-card" id="temp3" ondrop="DropTemp(event)" ondragover="AllowDrop(event)"></div>
+          <div class="temp-card" id="temp4" ondrop="DropTemp(event)" ondragover="AllowDrop(event)"></div>
+
+        <div class="time">
+              <div class="time-title" onmousedown='return false;' onselectstart='return false;'>TIME</div>
+              <div class="count" onmousedown='return false;' onselectstart='return false;'>{{time}}</div>
+        </div>
+
+          <div class="end-group" id="group1" ondrop="DropEnd(event,1)" ondragover="AllowDrop(event)"></div>
+          <div class="end-group" id="group2" ondrop="DropEnd(event,2)" ondragover="AllowDrop(event)"></div>
+          <div class="end-group" id="group3" ondrop="DropEnd(event,3)" ondragover="AllowDrop(event)"></div>
+          <div class="end-group" id="group4" ondrop="DropEnd(event,4)" ondragover="AllowDrop(event)"></div>
+        
+        </div>
+
+        <div class="card-deck">
+
+          <div class="card" id="cardGroup1">
+            <div class="pick-card" id="card10" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card11" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card12" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card13" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card14" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card15" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+            <div class="pick-card" id="card16" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup2">
+          <div class="pick-card" id="card20" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card21" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card22" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card23" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card24" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card25" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card26" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup3">
+          <div class="pick-card" id="card30" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card31" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card32" draggable="false"ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card33" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card34" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card35" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card36" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup4">
+          <div class="pick-card" id="card40" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card41" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card42" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card43" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card44" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card45" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card46" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup5">
+          <div class="pick-card" id="card50" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card51" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card52" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card53" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card54" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card55" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup6">
+          <div class="pick-card" id="card60" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card61" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card62" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card63" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card64" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card65" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup7">
+          <div class="pick-card" id="card70" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card71" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card72" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card73" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card74" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card75" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+        <div class="card"id="cardGroup8">
+          <div class="pick-card" id="card80" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card81" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card82" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card83" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card84" draggable="false" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+          <div class="pick-card" id="card85" draggable="true" ondragstart="Drag(event)" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+        </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="all.js"></script>
+</body>
+</html>
